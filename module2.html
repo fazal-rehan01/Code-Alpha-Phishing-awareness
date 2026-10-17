@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Module 2: Fake Website Detection</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Module 2: Fake website detection</h1>
+    <p class="lead">A malicious site often looks identical to the real one. The address bar is where the truth usually hides, so this module teaches you to read it.</p>
+
+    <section aria-labelledby="url-parts-heading">
+      <h2 id="url-parts-heading">How to read a URL</h2>
+      <p>Reading a web address from left to right takes practice. The most important part is the <strong>domain</strong>, the name immediately before the first single slash after the scheme.</p>
+      <div class="browser">
+        <div class="browser-bar">
+          <span class="dots">&#9679;&#9679;&#9679;</span>
+          <span class="browser-url">https://<span class="pill amber">support</span>.paypal.com.<span class="pill red">account-check.net</span>/login</span>
+        </div>
+        <div class="browser-page">
+          <p class="mb-0"><span class="pill amber">Subdomain (attacker text)</span> &nbsp; <span class="pill red">Real domain: account-check.net</span></p>
+          <p class="mb-0">Everything before the final two labels can be invented freely, so "support" and "paypal.com" here are just decoration.</p>
+        </div>
+      </div>
+      <div class="grid mt-1">
+        <div class="card">
+          <h3>Domain spoofing</h3>
+          <p>paypa1.com looks like paypal.com. The letter l has been swapped for the digit 1.</p>
+        </div>
+        <div class="card">
+          <h3>Subdomain tricks</h3>
+          <p>paypal.verify-security.com is a page on verify-security.com, not on paypal.com.</p>
+        </div>
+        <div class="card">
+          <h3>Misleading HTTPS</h3>
+          <p>The padlock only means the connection is encrypted. Anyone can get a certificate.</p>
+        </div>
+        <div class="card">
+          <h3>Design and content</h3>
+          <p>Blurry logos, broken layouts, missing contact details and pop-ups that demand action are all clues.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="game-heading">
+      <h2 id="game-heading">Real or fake?</h2>
+      <p>Five sites, one at a time. Decide whether each is genuine or fraudulent, then read the explanation.</p>
+
+      <div class="game-item card" data-answer="real" data-explain="The domain is paypal.com with no extra labels. The path and HTTPS are consistent.">
+        <div class="browser">
+          <div class="browser-bar"><span class="padlock">&#128274;</span><span class="browser-url">https://www.paypal.com/signin</span></div>
+          <div class="browser-page">Log in to your PayPal account</div>
+        </div>
+        <div class="game-actions">
+          <button type="button" class="btn" data-guess="real">Real</button>
+          <button type="button" class="btn" data-guess="fake">Fake</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="game-item card" data-answer="fake" data-explain="The real domain is verify-security.com. The word paypal is only a subdomain added to look convincing.">
+        <div class="browser">
+          <div class="browser-bar"><span class="padlock">&#128274;</span><span class="browser-url">https://paypal.verify-security.com/session</span></div>
+          <div class="browser-page">Confirm your PayPal password to continue</div>
+        </div>
+        <div class="game-actions">
+          <button type="button" class="btn" data-guess="real">Real</button>
+          <button type="button" class="btn" data-guess="fake">Fake</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="game-item card" data-answer="fake" data-explain="The domain uses the digit 1 in paypa1. Genuine PayPal traffic is on paypal.com.">
+        <div class="browser">
+          <div class="browser-bar"><span class="padlock">&#128274;</span><span class="browser-url">https://paypa1.com/login</span></div>
+          <div class="browser-page">Sign in to your account</div>
+        </div>
+        <div class="game-actions">
+          <button type="button" class="btn" data-guess="real">Real</button>
+          <button type="button" class="btn" data-guess="fake">Fake</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="game-item card" data-answer="real" data-explain="This is a normal page on the real example.com domain. Not every familiar-looking site is a scam; check the domain each time.">
+        <div class="browser">
+          <div class="browser-bar"><span class="padlock">&#128274;</span><span class="browser-url">https://www.example.com/help/contact</span></div>
+          <div class="browser-page">Contact us. Phone and address listed in the footer.</div>
+        </div>
+        <div class="game-actions">
+          <button type="button" class="btn" data-guess="real">Real</button>
+          <button type="button" class="btn" data-guess="fake">Fake</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="game-item card" data-answer="fake" data-explain="The hyphenated look-alike domain, the request for your card number and the countdown all point to a fraudulent page.">
+        <div class="browser">
+          <div class="browser-bar"><span class="padlock">&#128274;</span><span class="browser-url">http://www.paypal-secure-login.com/verify</span></div>
+          <div class="browser-page">Your account is locked. Enter your card number within 10 minutes.</div>
+        </div>
+        <div class="game-actions">
+          <button type="button" class="btn" data-guess="real">Real</button>
+          <button type="button" class="btn" data-guess="fake">Fake</button>
+        </div>
+        <p class="feedback"></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="decoder-heading">
+      <h2 id="decoder-heading">URL decoder</h2>
+      <p>Paste a link you are unsure about. The tool shows each part and points out the domain that actually matters.</p>
+      <div class="tool-row">
+        <input id="url-input" type="text" placeholder="https://paypal.com.account-check.net/login" aria-label="URL to analyse" autocomplete="off">
+        <button type="button" class="btn" id="url-decode-btn">Break it down</button>
+      </div>
+      <div id="url-output" aria-live="polite"></div>
+    </section>
+
+    <div class="btn-row">
+      <button type="button" class="btn" data-complete-btn="module2">Mark module complete</button>
+      <a class="btn btn-outline" href="module3.html">Next module</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/module2.js"></script>
+</body>
+</html>

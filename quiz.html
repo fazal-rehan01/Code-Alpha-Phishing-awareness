@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Assessment: Phishing Awareness Quiz</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Assessment</h1>
+    <p class="lead">22 questions covering emails, websites, social engineering and defence. You will see feedback after each answer, and you can review everything at the end. The pass mark is 70%.</p>
+
+    <div id="quiz-stage"></div>
+
+    <noscript>
+      <p class="note">This quiz needs JavaScript to run. The written modules still work without it.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/quiz-data.js"></script>
+  <script src="JS/quiz.js"></script>
+</body>
+</html>

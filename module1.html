@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Module 1: Phishing Email Anatomy</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Module 1: Phishing email anatomy</h1>
+    <p class="lead">Phishing emails are built to look ordinary. This module takes one apart piece by piece so you know what to check before you click anything.</p>
+
+    <section aria-labelledby="anatomy-heading">
+      <h2 id="anatomy-heading">What makes up an email</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Sender address</h3>
+          <p>The display name is free text. Always read the full address and the domain after the @ symbol.</p>
+        </div>
+        <div class="card">
+          <h3>Subject line</h3>
+          <p>Urgency and threats live here: "suspended", "final warning", "immediate action".</p>
+        </div>
+        <div class="card">
+          <h3>Body and links</h3>
+          <p>Links can show one address and point to another. Hover first, click later.</p>
+        </div>
+        <div class="card">
+          <h3>Attachments</h3>
+          <p>Unexpected files, especially with double extensions, are a common way to deliver malware.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="exercise-heading">
+      <h2 id="exercise-heading">Exercise: spot the 5 red flags</h2>
+      <p>Click the highlighted parts of the email below. Each one explains what is wrong with it. <strong data-flag-counter>0 of 5 found</strong></p>
+
+      <div class="email">
+        <div class="email-head">
+          <div>From: <span class="hotspot" data-flag="sender" tabindex="0">PayPal Security &lt;service@paypa1-secure.com&gt;</span></div>
+          <div>To: you@example.com</div>
+          <div>Subject: <span class="hotspot" data-flag="urgency" tabindex="0">Urgent: your account will be suspended today</span></div>
+          <div>Attachment: <span class="hotspot" data-flag="attachment" tabindex="0">Account_Statement.pdf.exe</span></div>
+        </div>
+        <div class="email-body">
+          <p><span class="hotspot" data-flag="greeting" tabindex="0">Dear Customer</span>,</p>
+          <p>We detected unusual activity on your account. You must confirm your details within 24 hours or your account will be closed permanently.</p>
+          <p>Confirm now:
+            <span class="link-tip" data-flag="link" tabindex="0">https://www.paypal.com/confirm
+              <span class="tip">This link actually points to http://paypa1-secure.com.ru/portal/login</span>
+            </span>
+          </p>
+          <p>Thank you,<br>PayPal Account Team</p>
+        </div>
+      </div>
+
+      <div class="flag-note" data-flag-note="sender">
+        <strong>Sender address:</strong> the real domain is paypal.com. Here the domain is paypa1-secure.com, using the digit 1 in place of the letter l.
+      </div>
+      <div class="flag-note" data-flag-note="urgency">
+        <strong>Urgency and threat:</strong> a deadline of 24 hours and the threat of permanent closure are designed to stop you thinking clearly.
+      </div>
+      <div class="flag-note" data-flag-note="attachment">
+        <strong>Attachment:</strong> a double extension (.pdf.exe) tries to look like a document while actually being an executable program.
+      </div>
+      <div class="flag-note" data-flag-note="greeting">
+        <strong>Generic greeting:</strong> "Dear Customer" shows the sender does not know your name, the sign of a mass campaign.
+      </div>
+      <div class="flag-note" data-flag-note="link">
+        <strong>Mismatched link:</strong> the visible text says paypal.com but the underlying address is a different domain entirely.
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn" data-complete-btn="module1">Mark module complete</button>
+        <a class="btn btn-outline" href="mode2.html">Next module</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="checklist-heading">
+      <h2 id="checklist-heading">Red flag checklist</h2>
+      <ul class="checklist">
+        <li>The sender address does not match the organisation it claims to be</li>
+        <li>Urgent or threatening language pushing you to act immediately</li>
+        <li>A link whose visible text and real destination disagree</li>
+        <li>A generic greeting such as "Dear Customer"</li>
+        <li>An unexpected attachment, particularly one with a double extension</li>
+        <li>Spelling, grammar or formatting that feels slightly off</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="compare-heading">
+      <h2 id="compare-heading">Legitimate vs phishing, side by side</h2>
+      <div class="compare">
+        <div class="card good">
+          <h3>Legitimate message</h3>
+          <ul class="checklist">
+            <li>Sender domain matches the real organisation</li>
+            <li>Addresses you by name when it knows you</li>
+            <li>No pressure to act within minutes</li>
+            <li>You are told to log in through the app or by typing the address</li>
+            <li>Contact details and links match the official site</li>
+          </ul>
+        </div>
+        <div class="card bad">
+          <h3>Phishing message</h3>
+          <ul class="checklist">
+            <li>Look-alike domain such as paypa1-secure.com</li>
+            <li>Generic greeting or a name that is slightly wrong</li>
+            <li>Countdown, threat or "final warning"</li>
+            <li>A login link in the message you are asked to follow</li>
+            <li>Unexpected attachment or a request for personal data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/module1.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Phishing Awareness Training</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Spot the scam before it spots you</h1>
+      <p>A short, practical course on phishing and social engineering. Learn how fake emails, malicious websites and manipulation tactics work, then test yourself with an interactive quiz.</p>
+      <a class="btn" href="module.html">Start training</a>
+    </section>
+
+    <section aria-labelledby="modules-heading">
+      <h2 id="modules-heading">The four modules</h2>
+      <p class="lead">Work through them in order, or jump straight to the topic you need.</p>
+      <div class="grid">
+        <a class="module-card" href="module.html">
+          <span class="tag">Module 1</span>
+          <h3>Phishing email anatomy</h3>
+          <p>Open a real-looking phishing email and find the clues that give it away.</p>
+        </a>
+        <a class="module-card" href="mode2.html">
+          <span class="tag">Module 2</span>
+          <h3>Fake website detection</h3>
+          <p>Read URLs properly, spot look-alike domains and judge a site's trustworthiness.</p>
+        </a>
+        <a class="module-card" href="module3.html">
+          <span class="tag">Module 3</span>
+          <h3>Social engineering tactics</h3>
+          <p>Understand the psychological triggers attackers use and how to slow down.</p>
+        </a>
+        <a class="module-card" href="module4.html">
+          <span class="tag">Module 4</span>
+          <h3>Best practices and defense</h3>
+          <p>Build a personal defence plan and learn how to report suspicious messages.</p>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="progress-heading">
+      <h2 id="progress-heading">Your progress</h2>
+      <div class="progress-box">
+        <p class="mb-0" data-progress-text>0 of 4 modules complete</p>
+        <div class="progress-track" role="img" aria-label="Course progress">
+          <div class="progress-fill" data-progress-fill></div>
+        </div>
+        <ul class="progress-list">
+          <li data-progress-item="module1">Emails <span data-status>Not started</span></li>
+          <li data-progress-item="module2">Websites <span data-status>Not started</span></li>
+          <li data-progress-item="module3">Social engineering <span data-status>Not started</span></li>
+          <li data-progress-item="module4">Defense <span data-status>Not started</span></li>
+        </ul>
+        <div class="btn-row">
+          <button type="button" class="btn btn-outline" data-reset-progress>Reset progress</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Ready for the quiz?</h2>
+      <p>The assessment has 22 questions and a 70% pass mark. You get feedback after every answer.</p>
+      <a class="btn" href="quiz.html">Go to the assessment</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>

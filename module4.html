@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Module 4: Best Practices and Defense</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Module 4: Best practices and defense</h1>
+    <p class="lead">Awareness catches most attempts, but a few habits stop the ones that get through. This module turns the course into a short personal plan.</p>
+
+    <section aria-labelledby="habits-heading">
+      <h2 id="habits-heading">Six habits worth building</h2>
+      <ul class="checklist">
+        <li><strong>Turn on multi-factor authentication</strong> everywhere it is offered, starting with email and banking.</li>
+        <li><strong>Verify out of band.</strong> For anything involving money, credentials or personal data, confirm through a different channel you already trust.</li>
+        <li><strong>Use a password manager</strong> so every account has a unique, strong password.</li>
+        <li><strong>Keep software updated</strong>, including your browser, phone and any apps you use for work.</li>
+        <li><strong>Report suspicious messages</strong> rather than deleting them silently.</li>
+        <li><strong>Practise regularly.</strong> Short refreshers keep the warning signs fresh.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="oob-heading">
+      <h2 id="oob-heading">What out-of-band verification means</h2>
+      <div class="card">
+        <p>Out-of-band means checking a request using a channel the request did not come through. If a payment request arrives by email, confirm it by phone on a number you already have. If a caller asks you to log in, do not use the link they send: open the site yourself.</p>
+        <p class="mb-0">The point is to break the attacker's control of the conversation. They can forge an email; they cannot easily answer your known-good phone number.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="plan-heading">
+      <h2 id="plan-heading">Build your defence plan</h2>
+      <p>Tick the steps you will take. Your choices are saved in this browser.</p>
+      <div class="card">
+        <ul class="checklist" id="defence-list">
+          <li><label><input type="checkbox" data-plan="mfa"> Enable MFA on my email and bank accounts</label></li>
+          <li><label><input type="checkbox" data-plan="manager"> Install and use a password manager</label></li>
+          <li><label><input type="checkbox" data-plan="verify"> Verify money and credential requests out of band</label></li>
+          <li><label><input type="checkbox" data-plan="updates"> Turn on automatic updates for my devices</label></li>
+          <li><label><input type="checkbox" data-plan="report"> Learn how to report a suspicious email at work</label></li>
+          <li><label><input type="checkbox" data-plan="training"> Retake this quiz every few months</label></li>
+        </ul>
+        <p class="mb-0" data-plan-progress>0 of 6 steps selected</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-outline" data-plan-reset>Clear plan</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="report-heading">
+      <h2 id="report-heading">How to report a suspicious message</h2>
+      <div class="card">
+        <p>Use your organisation's own process if it has one. If not, this template keeps the important details together.</p>
+        <ol>
+          <li>Do not click links or open attachments. Leave the message in place if your process needs it.</li>
+          <li>Forward it to your security or IT contact, or use the built-in "Report phishing" button in your mail client.</li>
+          <li>Note the sender address, the time you received it and what it asked you to do.</li>
+          <li>If you already clicked or entered details, change the password and tell your security team straight away.</li>
+        </ol>
+        <div class="note" id="report-template">
+          To: security@example.org<br>
+          Subject: Phishing report<br><br>
+          Sender address: <br>
+          Date and time received: <br>
+          Subject line: <br>
+          What it asked me to do: <br>
+          Did I click or reply? <br>
+          Anything else noticed:
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-outline" data-copy="#report-template">Copy</button>
+          <a class="btn" href="resource.html">Open the resource pack</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="btn-row">
+      <button type="button" class="btn" data-complete-btn="module4">Mark module complete</button>
+      <a class="btn btn-outline" href="quiz.html">Take the assessment</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/module4.js"></script>
+</body>
+</html>

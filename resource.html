@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Resources and Cheat Sheets</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Resources and cheat sheets</h1>
+    <p class="lead">Print this page for a one-page reminder, or copy the templates into your own notes.</p>
+    <div class="btn-row no-print">
+      <button type="button" class="btn" data-print>Print this page</button>
+    </div>
+
+    <section aria-labelledby="spot-heading">
+      <h2 id="spot-heading">Cheat sheet: spotting a phishing message</h2>
+      <div class="card">
+        <ul class="checklist">
+          <li>Read the full sender address, not just the display name</li>
+          <li>Ask whether you were expecting this message</li>
+          <li>Hover over links and check where they really go</li>
+          <li>Treat urgency, threats and secrecy as warnings</li>
+          <li>Never enter credentials through a link in a message</li>
+          <li>Confirm money and data requests out of band</li>
+          <li>Check for double extensions on attachments</li>
+          <li>When in doubt, stop and ask</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="url-heading">
+      <h2 id="url-heading">Cheat sheet: reading a URL</h2>
+      <div class="card">
+        <table class="decode">
+          <tbody>
+            <tr><th>https://</th><td>The connection is encrypted. This does not prove the site is honest.</td></tr>
+            <tr><th>support.paypal.com.account-check.net</th><td>The real domain is account-check.net. "support" and "paypal.com" are only subdomains.</td></tr>
+            <tr><th>paypa1.com</th><td>The digit 1 replaces the letter l. A classic look-alike.</td></tr>
+            <tr><th>paypal-secure-login.com</th><td>Hyphenated additions such as -secure or -login are a common giveaway.</td></tr>
+            <tr><th>http://</th><td>No encryption at all. Any site asking for details over plain http is suspect.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="report-heading">
+      <h2 id="report-heading">Reporting template</h2>
+      <div class="card">
+        <div class="note" id="report-copy">
+          To: security@example.org<br>
+          Subject: Phishing report<br><br>
+          Sender address: <br>
+          Date and time received: <br>
+          Subject line: <br>
+          What it asked me to do: <br>
+          Did I click or reply? <br>
+          Anything else noticed:
+        </div>
+        <div class="btn-row no-print">
+          <button type="button" class="btn btn-outline" data-copy="#report-copy">Copy template</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="further-heading">
+      <h2 id="further-heading">Where to learn more</h2>
+      <div class="card">
+        <p>Official guidance from national cyber security agencies is a good place to keep reading:</p>
+        <ul>
+          <li>Your national cyber security centre's advice pages on phishing and reporting</li>
+          <li>Your bank's own security section, for how it will and will not contact you</li>
+          <li>Your workplace IT or security team's internal reporting process</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="btn-row no-print">
+      <a class="btn" href="quiz.html">Test yourself</a>
+      <a class="btn btn-outline" href="index.html">Back to home</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>

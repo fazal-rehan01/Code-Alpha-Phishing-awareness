@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Module 3: Social Engineering Tactics</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Phishing Awareness Training</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="module.html">Emails</a></li>
+          <li><a href="mode2.html">Websites</a></li>
+          <li><a href="module3.html">Social Engineering</a></li>
+          <li><a href="module4.html">Defense</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="resource.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Module 3: Social engineering tactics</h1>
+    <p class="lead">Social engineering skips the technical flaws and targets people instead. It relies on predictable emotions, and once you can name the trick it loses much of its power.</p>
+
+    <section aria-labelledby="triggers-heading">
+      <h2 id="triggers-heading">The triggers attackers use</h2>
+      <div class="grid">
+        <div class="card trigger">
+          <h3>Urgency</h3>
+          <p class="quote">"Act now or your account will be closed."</p>
+          <p class="why">A deadline removes the pause you need to check facts.</p>
+        </div>
+        <div class="card trigger">
+          <h3>Authority</h3>
+          <p class="quote">"IT Department requires an immediate password reset."</p>
+          <p class="why">We are trained to obey people who sound official.</p>
+        </div>
+        <div class="card trigger">
+          <h3>Fear</h3>
+          <p class="quote">"Your computer is infected."</p>
+          <p class="why">Panic makes the offered fix look like a lifeline.</p>
+        </div>
+        <div class="card trigger">
+          <h3>Greed</h3>
+          <p class="quote">"You have won a prize."</p>
+          <p class="why">A reward makes people overlook the small print and the fee.</p>
+        </div>
+        <div class="card trigger">
+          <h3>Curiosity</h3>
+          <p class="quote">"Check out these photos of you."</p>
+          <p class="why">The unknown pulls us toward clicking just to see.</p>
+        </div>
+        <div class="card trigger">
+          <h3>Helpfulness</h3>
+          <p class="quote">"Can you help me with a quick favour?"</p>
+          <p class="why">Most people want to be useful, which is exactly what is exploited.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cases-heading">
+      <h2 id="cases-heading">Case studies</h2>
+      <div class="card">
+        <h3>1. The urgent invoice from the boss</h3>
+        <p>An employee receives an email that appears to come from the finance director, asking for an urgent payment to a new supplier. The display name matches, but the address is one character different. The payment is made before anyone checks by phone, and the money is gone.</p>
+        <p class="mb-0"><strong>Lesson:</strong> verify money requests out of band, however senior the sender appears to be.</p>
+      </div>
+      <div class="card">
+        <h3>2. The helpdesk that called you</h3>
+        <p>A caller claims to be from IT support and says your account has been compromised. They ask for a one-time code sent to your phone to "secure" it. The code is actually a login approval for the attacker.</p>
+        <p class="mb-0"><strong>Lesson:</strong> a support desk will never need your password or your one-time code.</p>
+      </div>
+      <div class="card">
+        <h3>3. The investment that cannot wait</h3>
+        <p>A new contact on a messaging app shares a trading platform with impressive screenshots and a small early withdrawal that works. Larger deposits are accepted but withdrawals stop, and the platform disappears.</p>
+        <p class="mb-0"><strong>Lesson:</strong> small early payouts are a deliberate trick to build false confidence.</p>
+      </div>
+      <div class="card">
+        <h3>4. The prompt that kept arriving</h3>
+        <p>An employee receives a stream of push notifications asking to approve a sign-in. Annoyed, they finally tap approve. The request was the attacker trying to log in with a password they had already stolen.</p>
+        <p class="mb-0"><strong>Lesson:</strong> never approve a sign-in you did not start. Report repeated prompts as an attack.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="video-heading">
+      <h2 id="video-heading">Watch and read</h2>
+      <div class="card">
+        <p><strong>Video: anatomy of a vishing call (12:40)</strong></p>
+        <p class="qmeta">The video plays in this space in the classroom version. A full transcript is provided below so the module works without it.</p>
+        <details>
+          <summary>Show transcript</summary>
+          <p>"Good afternoon, this is the security team. We have blocked an unusual sign-in from another country and we need to confirm it is not you. Can I take you through a quick verification? I will send a code to your phone now. Once you read it back to me I can lock the session down."</p>
+          <p>Every step in that call is designed to feel helpful and official. The code is the attacker's own login attempt, and the calm, procedural tone is there to keep the victim from questioning it.</p>
+          <p>The correct response is to end the call, then contact the organisation using a number you look up yourself.</p>
+        </details>
+      </div>
+    </section>
+
+    <section aria-labelledby="scenario-heading">
+      <h2 id="scenario-heading">What would you do?</h2>
+      <p>Work through the scenario. Each choice has a consequence.</p>
+      <div id="scenario-stage" class="card"></div>
+    </section>
+
+    <div class="btn-row">
+      <button type="button" class="btn" data-complete-btn="module3">Mark module complete</button>
+      <a class="btn btn-outline" href="module4.html">Next module</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Phishing Awareness Training</p>
+      <p>&copy; <span data-year></span> Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/module3.js"></script>
+</body>
+</html>
